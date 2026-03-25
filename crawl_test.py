@@ -15,7 +15,7 @@ async def main():
 
         # 코스피 마감시황 (마지막 행) 클릭
         if rows:
-            await rows[-1].click()
+            await rows[-1].click(force=True)
             await page.wait_for_timeout(1500)
 
         # 내용 읽기
